@@ -19,6 +19,7 @@ def fib(max):
         a,b=b,a+b
         n += 1
         print(a)
+    return 'yueyue'
 fib(10)
 
 print('\n\n\n\n\n\nfib_g')
@@ -32,17 +33,54 @@ def fib_g(max):
         yield b
         a,b=b,a+b
         n += 1
+    return 'yueyue'
 g=fib_g(10)
 print(next(g))
 print(next(g))
 print(next(g))
-print(next(g))
-print(next(g))
-print(next(g))
-print(next(g))
+
+'''
+def odd():
+    print('step 1')
+    yield 1
+    print('step 2')
+    yield 2
+    print('step 3')
+    yield 3
+a=odd()
+next(a)
+print(next(a))
+'''
+
+
+gg=fib_g(10)
+while True:
+    try:
+        x=next(gg)
+        print('gg:',x )
+    except StopIteration as e:
+        print('Generator return value: ',e.value)
+        break
 
 
 
 
 
 
+
+
+
+def triangles():
+    L = [1]
+    while True:
+        yield L
+        L.append(0)
+        L = [L[x - 1] + L[x] for x in range(len(L))]
+t=triangles()
+print(next(t))
+print(next(t))
+print(next(t))
+print(next(t))
+print(next(t))
+print(next(t))
+print(next(t))
