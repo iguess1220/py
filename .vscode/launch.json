@@ -9,6 +9,7 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
+            "console":"none",
             "program": "${file}"
         },
         {
