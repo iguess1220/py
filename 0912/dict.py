@@ -31,5 +31,5 @@ print(D)
 D.update({'name':'chenyang'})
 print(D)
 
-C=D.get('ne_name','lifangyue')
+C=D.get('new_name','lifangyue')
 print(C)
