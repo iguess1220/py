@@ -33,6 +33,6 @@ print(result)
 
 # join  --> 符号.join(可迭代对象) 返回结果
 list = ['zhangsan','lisi','wangwu']
-result = ','.join(list)
+result = '!'.join(list)
 print(result)
 
