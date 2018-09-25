@@ -1,0 +1,24 @@
+class Dog:
+    def bark(self):
+        print("汪汪叫")
+class XTQ(Dog):
+    def bark(self): # 重写： 实现了和父类同名的方法，调用方法时会执行当前类的方法
+        print("嗷嗷叫")  # 继承链： 子类-->父类-->.... --> object
+        """想要调用父类被重写的方法，方式1 ：直接调用父类的方法"""
+        Dog.bark(self)
+        """方式2 ： super(当前类名，对象).方法名"""
+        super(XTQ,self).bark()
+
+
+        #在类内部可简化写成：
+        """在单继承中使用非常广泛"""
+        super().bark()
+        # super函数会在查询继承链中指定类的下一个类，一般时指父类，如果父类没有，会继续查询再下一个类，直到找到或报错
+
+
+
+    def __str__(self):
+        return None
+
+xiaotq = XTQ()
+xiaotq.bark()
